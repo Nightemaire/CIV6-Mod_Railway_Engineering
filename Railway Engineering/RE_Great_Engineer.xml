@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Railway Great Engineer - Theodore Judah -->
+<!-- Author: Nightemaire -->
+<!-- DateCreated: 6/18/2022 16:09:47 -->
+<GameData>
+	<Types>
+		<Row Type="GREAT_PERSON_INDIVIDUAL_THEODORE_JUDAH" Kind="KIND_GREAT_PERSON_INDIVIDUAL"/>
+	</Types>
+
+	<GreatPersonIndividuals>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_THEODORE_JUDAH" 
+			 Name="LOC_GREAT_PERSON_INDIVIDUAL_THEODORE_JUDAH_NAME" 
+			 GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" 
+			 EraType="ERA_INDUSTRIAL"
+			 Gender="M" 
+			 ActionCharges="1" 
+			 ActionRequiresCompletedDistrictType="DISTRICT_INDUSTRIAL_ZONE"
+			 ActionEffectTextOverride="LOC_GREATPERSON_THEODORE_JUDAH_ACTIVE"
+			 />
+	</GreatPersonIndividuals>
+
+	<GreatPersonIndividualActionModifiers>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_THEODORE_JUDAH" 
+			 ModifierId="GREATPERSON_RAILYARD" 
+			 AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"
+			 />
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_THEODORE_JUDAH"
+			 ModifierId="GREATPERSON_RAILYARD_PRODUCTION"
+			 AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"
+			 />
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_THEODORE_JUDAH" 
+			 ModifierId="GREATPERSON_THEODORE_JUDAH_EXTRA_RANGE" 
+			 AttachmentTargetType="GREAT_PERSON_ACTION_ATTACHMENT_TARGET_DISTRICT_IN_TILE"
+			 />
+	</GreatPersonIndividualActionModifiers>
+
+	<Modifiers>
+		<Row>
+			<ModifierId>GREATPERSON_RAILYARD</ModifierId>
+			<ModifierType>MODIFIER_SINGLE_CITY_GRANT_BUILDING_IN_CITY_IGNORE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_RAILYARD_PRODUCTION</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_YIELD_CHANGE</ModifierType>
+			<RunOnce>false</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_THEODORE_JUDAH_EXTRA_RANGE</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_DISTRICT_ADJUST_EXTRA_REGIONAL_RANGE</ModifierType>
+			<RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+		</Row>
+	</Modifiers>
+
+	<ModifierArguments>
+		<Row>
+			<ModifierId>GREATPERSON_RAILYARD</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_RAILYARD</Value>
+		</Row>
+
+		<Row>
+			<ModifierId>GREATPERSON_RAILYARD_PRODUCTION</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_PRODUCTION</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_RAILYARD_PRODUCTION</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_RAILYARD</Value>
+		</Row>
+		<Row>
+			<ModifierId>GREATPERSON_RAILYARD_PRODUCTION</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+
+		<Row>
+			<ModifierId>GREATPERSON_THEODORE_JUDAH_EXTRA_RANGE</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+	</ModifierArguments>
+</GameData>

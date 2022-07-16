@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GameData -->
+<!-- Author: Nightemaire -->
+<!-- DateCreated: 6/18/2022 7:16:22 PM -->
+<GameData>
+	<Types>
+		<Row Type="UNIT_RAILROAD_BUILDER" Kind="KIND_UNIT"/>
+	</Types>
+	
+	<UnitAiInfos>
+		<Row UnitType="UNIT_RAILROAD_BUILDER" AiType="UNITTYPE_CIVILIAN"/>
+	</UnitAiInfos>
+	
+	<TypeTags>
+		<Row Type="UNIT_RAILROAD_BUILDER" Tag="CLASS_BUILDER"/>
+		<Row Type="UNIT_RAILROAD_BUILDER" Tag="CLASS_SUPPORT"/>
+	</TypeTags>
+	
+	<Units>
+		<Row UnitType="UNIT_RAILROAD_BUILDER"
+			 Cost="60"
+			 BaseMoves="1"
+			 BaseSightRange="2"
+			 ZoneOfControl="false"
+			 Domain="DOMAIN_LAND"
+			 FormationClass="FORMATION_CLASS_CIVILIAN"
+			 Combat="0"
+			 AdvisorType="ADVISOR_GENERIC"
+			 Name="LOC_UNIT_RAILROAD_BUILDER_NAME"
+			 Description="LOC_UNIT_RAILROAD_BUILDER_DESCRIPTION"
+			 CanCapture="False"
+			 CostProgressionModel="COST_PROGRESSION_GAME_PROGRESS"
+			 CostProgressionParam1="400"
+			 PurchaseYield="YIELD_GOLD"
+			 IgnoreMoves="false"
+			 MakeTradeRoute="false"
+			 PrereqTech="TECH_STEAM_POWER"
+			 BuildCharges="0"
+			 StrategicResource="RESOURCE_IRON"
+			 />
+	</Units>
+	
+	<Units_XP2>
+		<Row UnitType="UNIT_RAILROAD_BUILDER"
+			 CanEarnExperience="false"
+			 ResourceCost="10"
+			 ResourceMaintenanceType="RESOURCE_COAL"
+			 ResourceMaintenanceAmount="1"
+			 CanFormMilitaryFormation="false"
+			 />
+	</Units_XP2>
+	
+	<Unit_BuildingPrereqs>
+		<Row Unit="UNIT_RAILROAD_BUILDER" PrereqBuilding="BUILDING_RAILYARD"/>
+	</Unit_BuildingPrereqs>
+	
+</GameData>

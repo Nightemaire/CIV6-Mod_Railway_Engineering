@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>Railway Engineering</Name>
+    <Guid>43e965ba-4455-4425-b84f-052abfe25cee</Guid>
+    <ProjectGuid>398a3794-47da-48b7-b16a-f8d9f29491b6</ProjectGuid>
+    <ModVersion>1</ModVersion>
+    <Teaser>Easier railroad construction</Teaser>
+    <Description>Adds a new building, unit, and a great person to make building railroads a little less painful, and maybe a little more fun.
+
+This is my first mod, and first version...Expect a bug or two, so please let me know if you come across one.
+
+Also, I'm not an artist, all icons and graphics are taken from the base game and reused. I probably won't update either unless an intrepid artist wants to contribute :)</Description>
+    <AffectsSavedGames>false</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <CompatibleVersions>2.0</CompatibleVersions>
+    <InGameActionData><![CDATA[<InGameActions><UpdateArt id="Art"><File>Railway_Engineering.Art.xml</File></UpdateArt><UpdateDatabase id="Gameplay"><File>RE_Railroad_Builder.xml</File><File>RE_Railyard_Building.xml</File><File>RE_Great_Engineer.xml</File></UpdateDatabase><UpdateIcons id="Icons"><File>RE_Icons.xml</File></UpdateIcons><UpdateText id="Text"><File>RE_Text.xml</File><File>RE_Great_Engineer_Text.xml</File></UpdateText><AddGameplayScripts id="NewAction"><File>RE_BuildRailways.lua</File></AddGameplayScripts></InGameActions>]]></InGameActionData>
+    <AssemblyName>Railway Engineer</AssemblyName>
+    <RootNamespace>Railway Engineer</RootNamespace>
+    <Authors>Ben Barrett</Authors>
+    <AssociationData><![CDATA[<Associations>
+  <Dependency type="Dlc" title="Expansion: Gathering Storm" id="4873eb62-8ccc-4574-b784-dda455e74e68" />
+</Associations>]]></AssociationData>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="RE_Great_Engineer_Text.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="RE_Great_Engineer.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="RE_Railyard_Building.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Folder Include="ArtDefs\" />
+    <ArtDef Include="ArtDefs\Units.artdef" />
+    <None Include="Railway_Engineering.Art.xml" />
+    <Content Include="RE_BuildRailways.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="RE_Railroad_Builder.xml" />
+    <Content Include="RE_Icons.xml" />
+    <Content Include="RE_Text.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
